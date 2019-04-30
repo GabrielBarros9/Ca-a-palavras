@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: ;
+}
+li {
+      text-decoration: none;
+    font-size: 10px;
+    margin-left: 5px;
+    color:white;
+    padding: 5px 5px;   
+}
+body {
+    background-image: url(img/cri.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: 'Amatic SC', cursive;
+     
+}
+
+h3 {
+   text-decoration: none;
+    font-size: 10px;
+    margin-left: 5px;
+    color:white;
+    padding: 5px 5px; 
+} 
+ol li{
+  margin-left:10px;
+}
+
+a {
+            font-size: 10px;
+            color: rgb(255,255,255);
+            text-transform: uppercase;
+            margin-left: 5px; 
+            text-decoration: none;
+
+        }
+
