@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Caça-Palavras</title>
+        <link rel="stylesheet" href="ajuda.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+	<!-- Div container -->
+    <div class="container">
+    	<!-- Titulo do projeto -->
+    	<div class="cabecalho">
+    		<h1 class="item animated rubberBand">CAÇA-PALAVRAS</h1>
+    	</div>
+	   
+    	<nav class="item animated flipInX">
+    		<ul>
+    			<a href="jogar.html"><li>JOGAR</li></a>
+    			<a href="sobrenovo.html"><li>SOBRE</li></a>
+    			<a href="Ajuda.html"><li>AJUDA</li></a>
+    		</ul>	
+    	</nav>
+    </div>
+</body>
+</html>
