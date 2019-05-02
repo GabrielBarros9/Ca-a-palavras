@@ -7,8 +7,8 @@
       font-family: ;
 }
 li {
-      text-decoration: none;
-    font-size: 39px;
+    text-decoration: none;
+    font-size: 38px;
     margin-left: 10px;
     color:white;
     padding: 10px 10px;   
@@ -20,18 +20,6 @@ body {
     font-family: 'Amatic SC', cursive;
      
 }
-
-h3 {
-   text-decoration: none;
-    font-size: 39px;
-    margin-left: 10px;
-    color:white;
-    padding: 10px 10px; 
-} 
-ol li{
-  margin-left:10px;
-}
-
 a {
             font-size: 60px;
             color: rgb(255,255,255);
