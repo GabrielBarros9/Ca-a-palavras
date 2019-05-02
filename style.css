@@ -6,7 +6,7 @@
 }
 body{
     background-color: white;
-    background-image:url('cri.jpg');
+    background-image:url(cri.jpg);
     background-size:cover; 
     overflow: hidden;
 }
