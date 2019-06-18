@@ -1,22 +1,23 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
+const express = require('express');
 
-http.createServer(function (req, res) {
-    var q = url.parse(req.url, true);
-    var filename = "." + q.pathname;
+const app = express();
 
-    fs.readFile(filename, function(err, data) {
-        if (err) {
-            res.writeHead(404, {'Content-Type': 'text/html'});
-            return res.end("404 Not Found");
-        }
+app.get('/', (req, res) => {
+  res.send('Pagina Inicial\n');
+})
 
-        //res.writeHead(200, {'Content-Type': 'text/html'});
-        res.write(data);
+app.get('/sobre', (req, res) => {
+  res.send('sobre\n');
+})
 
-        return res.end();
+app.get('/jogar', (req, res) => {
+  res.send('jogar\n');
+})
 
-    });
+app.get('/ajuda', (req, res) => {
+  res.send('ajuda\n');
+})
 
-}).listen(8080);
+app.listen(8080, () => {
+  console.log('Listening on localhost:8080');
+})
