@@ -1,7 +1,5 @@
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +77,7 @@ ul li:hover{
 			/*position: absolute;*/
 			margin-left: 50px;
 			margin-top: 50px;
-			width: 351px;
+			width: 250px;
 			height: auto;
 			
 		}
@@ -101,7 +99,7 @@ ul li:hover{
 
 		.array{
 		cursor:pointer;
-		margin-left: 351px;
+		margin-left: 251px;
 	}
 	.casa {
 		border: 1px solid white; 
@@ -141,69 +139,85 @@ ul li:hover{
 		
 		
 	<div class="array">
-	<script type="text/javascript" >
-					
-			var a = ["GOIÂNIA","BELÉM","RECIFE","VITÓRIA","MACAPÁ","PALMAS","FORTALEZA","CURITIBA","SALVADOR"];
+<script type="text/javascript">
 			
-			var b = [6,7,8,5,6,7,3,9,8];
+			var a = ["RECIFE","FORTALEZA","RIODEJANEIRO","SALVADOR","SAOPAULO","PIAUI","ALAGOAS","GOIANIA","MANAUS","CUIABA","ARACAJU","TEREZINA"]; 
+			var b = [6,9,12,8,8,5,7,7,6,6,7,8];
+			
+			
 			var arr = [
-					   	["G","R","E","C","I","F","E","Y","M","A","R","T"],
-					    ["A","O","E","A","V","G","O","I","Â","N","I","A"],
-					    ["A","L","C","U","R","I","T","I","B","A","F","L"],
-					    ["P","I","A","A","Á","I","L","I","M","A","O","T"],
-					    ["M","A","Q","G","P","G","A","A","H","O","R","E"],
-					    ["A","C","L","R","A","J","U","V","I","T","T","O"],
-					    ["V","B","K","M","C","A","C","O","A","G","A","R"],
-					    ["L","U","M","I","A","I","S","S","S","N","L","B"],
-					    ["G","U","A","C","M","S","D","P","E","T","E","E"],
-					    ["C","O","V","I","T","Ó","R","I","A","A","Z","L"],
-					    ["A","L","O","H","L","N","S","P","O","P","A","É"],
-					    ["S","A","L","V","A","D","O","R","E","Z","O","M"]
-					];
+				
+					    ["S","A","B","C","L","I","M","R","E","C","I","F","E","O","S","M"],
+						["A","F","O","R","T","A","L","E","Z","A","A","R","O","L","A","A"],
+						["O","T","E","R","E","Z","I","N","A","O","A","B","D","N","L","N"],
+						["P","I","C","A","A","P","I","O","H","A","L","E","N","E","V","A"],
+						["A","Z","Q","X","B","G","J","S","A","O","Q","L","C","H","A","U"],
+						["U","C","Y","R","T","A","E","R","I","T","B","E","L","G","D","S"],
+						["L","A","M","S","O","F","A","H","A","G","A","M","O","S","O","H"],
+						["O","U","L","I","O","C","T","E","S","N","O","W","B","S","R","I"],
+						["G","U","E","A","A","C","U","I","A","B","A","R","Y","E","U","E"],
+						["C","O","B","J","G","G","O","I","A","N","I","A","B","A","G","O"],
+						["A","J","U","H","L","O","S","P","O","P","S","T","I","R","N","C"],
+						["P","A","H","E","A","B","A","R","S","I","L","P","I","S","A","U"],
+						["F","N","V","G","J","L","O","S","R","I","L","O","U","C","M","B"],
+						["R","I","O","D","E","J","A","N","E","I","R","O","L","B","L","N"]
+						];
+
+
             var Gabarito = [
-				[-1,0,0,0,0,0,0,-1,-1,-1,-1,-1],
-				[-1,-1,-1,-1,-1,1,1,1,1,1,1,1],
-				[-1,-1,2,2,2,2,2,2,2,2,7,-1],
-			    [4,-1,-1,-1,6,-1,-1,-1,-1,-1,7,-1],
-			    [-1,4,-1,-1,6,-1,-1,-1,-1,-1,7,-1],
-			    [-1,-1,4,-1,6,-1,-1,-1,-1,-1,7,-1],
-				[-1,-1,-1,4,6,-1,-1,-1,-1,-1,7,-1],
-				[-1,-1,-1,-1,6,-1,-1,-1,-1,-1,7,3],
-				[-1,-1,-1,-1,6,4,-1,-1,-1,-1,7,3],
-				[-1,-1,4,4,4,4,4,4,4,-1,7,3],
-				[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,7,3],
-				[8,8,8,8,8,8,8,8,-1,-1,-1,3]
-			];
-					    document.write('<table style=" border-collapse: collapse ";');
-			    for (var i = 0; i < arr.length; i++) {
-			        document.write('<tr>');
-			        for (var j = 0; j < arr[0].length; j++) {
-			        // note o ` na string
-			        document.write(`<td id="${i}-${j}" class="casa" onclick="clicou(${i}, ${j})">${arr[i][j]}</td>`);
-			        }
-			        document.write('</tr>');
-			    }
-			    document.write('</table>');
-                  function clicou(i, j) {
-					  arr[i] -= i,j; 
-					  var id = i.toString() + '-' + j.toString();
-					
-					  
-					  
-					  var d = document.getElementById(id);
-					  
-					  if(Gabarito[i][j] != -1 ){
-						  d.className='casa2';
-						  d.removeAttribute('onclick');
-						qntLetras++;
-						var indice = Gabarito[i][j];
-						if(qntLetras == a[indice].length){
-							var estilo = document.getElementById('palavra' + indice);
-							estilo.style.textDecoration = 'line-through red';
-							qntLetras = 0;
-						}
+	                        [4,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,-1,3,8],
+	                        [4,1,1,1,1,1,1,1,1,1,-1,-1,-1,-1,3,8],
+	                        [4,11,11,11,11,11,11,11,11,-1,-1,-1,-1,-1,3,8],
+	                        [4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,8],
+	                        [4,-1,-1,-1,-1,-1,-1,-1,10,-1,-1,-1,-1,-1,3,8],
+	                        [4,-1,-1,-1,-1,-1,-1,10,-1,-1,-1,-1,-1,-1,3,8],
+	                        [4,6,-1,-1,-1,-1,10,-1,-1,-1,-1,-1,-1,-1,3,-1],
+	                        [4,-1,6,-1,-1,10,-1,-1,-1,-1,-1,-1,-1,-1,3,5],
+	                        [-1,-1,-1,6,10,9,9,9,9,9,9,-1,-1,-1,5,-1],
+	                        [-1,-1,-1,10,6,7,7,7,7,7,7,7,-1,5,-1,-1],
+	                        [-1,-1,10,-1,-1,6,-1,-1,-1,-1,-1,-1,5,-1,-1,-1],
+	                        [-1,-1,-1,-1,-1,-1,6,-1,-1,-1,-1,5,-1,-1,-1,-1],
+	                        [-1,-1,-1,-1,-1,-1,-1,6,-1,-1,-1,-1,-1,-1,-1,-1],
+	                        [2,2,2,2,2,2,2,2,2,2,2,2,-1,-1,-1,-1]
+	                        ];
+
+							document.write('<table style=" border-collapse: collapse;"class="item animated fadeInRight">');
+
+for (var i = 0; i < arr.length; i++) {
+	document.write('<tr>');
+	for (var j = 0; j < arr[0].length; j++) {
+	// note o ` na string
+	document.write(`<td id="${i}-${j}" class="casa" onclick="clicou(${i}, ${j})">${arr[i][j]}</td>`);
+	}
+	document.write('</tr>');
+}
+
+
+document.write('</table>');
+
+  function clicou(i, j) {
+	  arr[i] -= i,j; 
+	  var id = i.toString() + '-' + j.toString();
+	
+	  
+	  
+	  var d = document.getElementById(id);
+	  
+	  if(Gabarito[i][j] != -1 ){
+		  d.className='casa2';
+		  d.removeAttribute('onclick');
+
+		qntLetras++;
+		var indice = Gabarito[i][j];
+
+		if(qntLetras == a[indice].length){
+			var estilo = document.getElementById('palavra' + indice);
+			estilo.style.textDecoration = 'line-through red';
+			qntLetras = 0;
+		}
 						b[indice]--;
 						console.log(b);
+
 					  }
 					  var contador= 0;
 						for(var i = 0; i<b.length; i++ )
@@ -212,29 +226,32 @@ ul li:hover{
 								contador++;
 							}
 						}
-						if(contador == 9){
-							var conf= confirm('PARABÉNS, AGORA VAMOS PARA O PROXIMO NIVEL');
-							if(conf){
-								window.location.href = "nivel2.html";
-							}
-						}
-			 
-			   }
-			   function ganhou(){
-				
-			   }
-					  
-					const casa = document.querySelectorAll('.casa');
-				
-				//    console.log(id);
+		
+		if(contador == 12){
+			alert('VOCÊ GANHOU, PARABENS.');
+			// window.location.href = "nivel2.html";
+			
+		}
+
+}
+
+function ganhou(){
+
+}
+	  
+	const casa = document.querySelectorAll('.casa');
+
+
+
+
 		</script>
 		</div>
 		<div class="palavras">
 			<script type="text/javascript">
-					document.write("<ul>");
-						for (var i in a) 
+				document.write("<ul>");
+					for (var i in a) 
 						{	
-   							document.write(`<li id="palavra${i}">`);
+							document.write(`<li id="palavra${i}">`);
    							document.write(a[i]+"\n");
    							document.write("</li>");
    							document.write("<br>");
@@ -242,12 +259,14 @@ ul li:hover{
 					document.write("</ul>");
 					var qntLetras = 0;
 		    </script>
-
 		</div>
-	
-
 
 	
+
 	
 </body>
 </html>
+
+
+
+
